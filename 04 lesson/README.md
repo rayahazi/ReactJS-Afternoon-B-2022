@@ -1,10 +1,11 @@
-# Lists & Keys
+# Lists and keys
 
-We will usually use the `map()` function to loop over array.
+- List - any array. `[]`
+- in react - any value in the list must have a unique key (for manipulation - edit, delete etc..)
 
-### map(callbackfn: (value: number, index: number))
+## map(callbackfn: (value: number, index?: number))
 
-map(callbackfn: (value: number, index: number)) - Calls a defined callback function on each element of an array, and returns an array that contains the results.
+Calls a defined callback function on each element of an array, and returns an array that contains the results.
 
 ```js
 import React, { Component } from "react";
@@ -12,16 +13,15 @@ import React, { Component } from "react";
 export default class App extends Component {
   constructor(props) {
     super(props);
-    this.state = {
-      isWin: true,
-    };
+    this.state = {};
   }
 
-  // map(callbackfn: (value: number, index: number) ) -  Calls a defined callback function on each element of an array,
+  // map(callbackfn: (value: number, index: number))
+  // Calls a defined callback function on each element of an array,
   // and returns an array that contains the results.
   func() {
     let arr = [1, 2, 3, 4, 5];
-    let doubledArr = arr.map((num) => num * 5); // [5, 10, 15, 20, 25]
+    let doubledArr = arr.map((num) => num * 5);
     console.log(doubledArr);
   }
 
@@ -31,13 +31,13 @@ export default class App extends Component {
 }
 ```
 
-## Using map() - with keys:
+## Keys
 
 - Create the array in the state object
 - call the array directly from the return() function.
-- each value in the array will be presented in a paragraph
-- key - each node in the array must have a unique key. We can use the index for it.
-- We add the key to the element of HTML.
+- each value in the array will be presented in a paragraph in the browser.
+- Key - each node in the array must have a unique key. We can use the index for it.
+- We add the key attribute to the element of HTML .
 
 ```js
 import React, { Component } from "react";
@@ -46,7 +46,6 @@ export default class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      isWin: true,
       arr: [1, 2, 3, 4, 5],
     };
   }
@@ -56,7 +55,7 @@ export default class App extends Component {
       <div className="container">
         {this.state.arr.map((num, index) => (
           <p key={index}>
-            index: {index}. value: {num * 5}
+            index = {index}, value = {num * 5}
           </p>
         ))}
       </div>
@@ -65,16 +64,16 @@ export default class App extends Component {
 }
 ```
 
-- Output:
+- output:
 
 ```
-index: 0. value: 5
+index = 0, value = 5
 
-index: 1. value: 10
+index = 1, value = 10
 
-index: 2. value: 15
+index = 2, value = 15
 
-index: 3. value: 20
+index = 3, value = 20
 
-index: 4. value: 25
+index = 4, value = 25
 ```
