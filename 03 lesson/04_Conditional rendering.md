@@ -82,3 +82,51 @@ export default class App extends Component {
   }
 }
 ```
+
+## Use operators : `&&` and `||`
+
+We can use the operators `&&` and `||` in a very similar way to `if-else`(short if).
+
+- && operator - true + true
+- || operator - true + false
+
+our condition:
+
+- (true/false) && true || true
+
+> anything that isn't `false` - is true.
+
+```js
+import React, { Component } from "react";
+
+export default class App extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      isWin: true,
+    };
+  }
+
+  render() {
+    return (
+      <div className="container">
+        {/* 
+        use operators: && ||
+        && - true + true
+        || - true + false
+
+        (true/false) && true || true
+
+        * true && true (no continue to ||)
+        * false || true
+        
+        */}
+
+        {(this.state.isWin && <h3 className="alert alert-success">WIN</h3>) || (
+          <h3 className="alert alert-danger">LOSE</h3>
+        )}
+      </div>
+    );
+  }
+}
+```
