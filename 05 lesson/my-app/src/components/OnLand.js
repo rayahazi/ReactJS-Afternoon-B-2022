@@ -9,14 +9,9 @@ export default class OnLand extends Component {
 
     renderAnimalsList(){
 
-        let randAnimals = [];
-        for (let i = 0; i < this.props.animalsNum; i++) {
-            let randIndex = Math.floor(Math.random()*arrLandAnimals.length)
-            let randItem = arrLandAnimals.splice(randIndex, 1)[0];
-            randAnimals.push(randItem);
-        }
-
-
+       // take random values from an array:
+        let randAnimals = arrLandAnimals.sort(() => .5 - Math.random()).slice(0,this.props.animalsNum)
+        
         return randAnimals
         .filter((item, index) => index < this.props.animalsNum )
         .map(animal => {
