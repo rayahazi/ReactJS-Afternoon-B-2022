@@ -1,0 +1,13 @@
+.App {
+  text-align: center;
+}
+
+.startingPoint{
+  background-color: rgb(125, 52, 52);
+  color:antiquewhite;
+}
+
+.afterClick{
+  background-color: rgb(60, 191, 171);
+  color:rgb(39, 47, 84);
+}
