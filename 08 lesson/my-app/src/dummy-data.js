@@ -1,0 +1,20 @@
+export const myCoffees = [
+    {
+        id:1,
+        name:'Espresso',
+        img:'https://forexdengi.com/filedata/fetch?id=27779125',
+        price:'5.5'
+    }, 
+    {
+        id:2,
+        name:'Latte',
+        img:'https://i.pinimg.com/736x/17/e0/9c/17e09ce2bcd8a29d56e6ba8abde508d9--coffee-culture-brunch.jpg',
+        price:'8'
+    }, 
+    {
+        id:3,
+        name:'Cappuchinno',
+        img:'https://i1.wallbox.ru/wallpapers/main2/201725/14978928755948080b1a38d9.12077544.jpg',
+        price:'7.5'
+    }, 
+]
