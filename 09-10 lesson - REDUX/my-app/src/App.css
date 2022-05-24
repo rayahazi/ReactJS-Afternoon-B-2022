@@ -1,0 +1,13 @@
+.App {
+  text-align: center;
+}
+
+.myFirstStyle{
+  background-color:rgb(100, 148, 115);
+  color:wheat;
+}
+
+.mySecondStyle{
+  background-color: pink;
+  color: red;
+}
