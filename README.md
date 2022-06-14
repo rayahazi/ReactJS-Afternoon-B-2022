@@ -62,9 +62,14 @@ Demo: Articles website using redux & routes
 ### 11 lesson
 
 Firebase   
+ * CREATE
+ * READ
+ * UPDATE
+ * DELETE
 
 ### 12 lesson
 
+Prepare for exam. 
 
 #### All rights reserved: Raaya Klein 2022
 
