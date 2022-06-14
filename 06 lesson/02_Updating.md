@@ -65,9 +65,52 @@ export default class App extends Component {
 // Updating: shouldComponentUpdate, render
 ```
 
-## 4. getSnapshotBeforeUpdate() & 5. componentDidUpdate()
+## 4. getSnapshotBeforeUpdate() 5. componentDidUpdate()
 
-- getSnapshotBeforeUpdate() - store the previous value of state & props (before changes).
-  It must come with `componentDidUpdate()` function.
+getSnapshotBeforeUpdate() - store the previous value in state & props.
+It must come with componentDidUpdate() method.
 
-- componentDidUpdate() - The final method for updating. We can send the final value, or the data to DB etc..
+componentDidUpdate() - it is the final metohd for updating. We can send the final value,
+the data to database.
+
+```js
+import React, { Component } from "react";
+
+export default class Example extends Component {
+  constructor(props) {
+    super(props);
+    this.state = { myCity: "Jerusalem" };
+  }
+
+  // belong to mounting
+  // Will update the myCity variable after 1 second
+  componentDidMount() {
+    setTimeout(() => this.setState({ myCity: "Ariel" }), 10000);
+  }
+
+  // store the previous value in state:
+  getSnapshotBeforeUpdate(prevProps, prevState) {
+    document.getElementById(
+      "div1"
+    ).innerHTML = `My city was: ${prevState.myCity}`;
+  }
+
+  // must come with getSnapshotBeforeUpdate
+  componentDidUpdate() {
+    document.getElementById(
+      "div2"
+    ).innerHTML = `My city is: ${this.state.myCity}`;
+  }
+
+  render() {
+    return (
+      <div>
+        <h2>I live in {this.state.myCity}</h2>
+        <div id="div1"></div>
+        <div id="div2"></div>
+      </div>
+    );
+  }
+}
+```
+
