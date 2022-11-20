@@ -46,7 +46,7 @@ export let arrSkyAnimals = [
     new Animal('owl', ''),
     new Animal('dragon', ''),
 ]
-```
+
 export let arrSeaAnimals = [
     new Animal('Dolphin', 'https://lookw.ru/9/934/1566940324-3.jpg'),
     new Animal('fish', 'https://postila.ru/data/e9/e1/08/6a/e9e1086a915bae3fe189d2f070541b40757c6b3cb4a3d9190df657de944ead29.jpg'),
