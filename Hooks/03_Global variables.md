@@ -1,0 +1,1 @@
+# Global variables: useState, useReducer and useContext. 
